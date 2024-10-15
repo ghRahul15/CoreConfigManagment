@@ -13,7 +13,7 @@ builder.SetBasePath(Directory.GetCurrentDirectory());
 //The ones added late in this, take precedence
 builder.AddJsonFile("mySettings.json", true,true)
     .AddJsonFile("prod.json",true,true)
-    ;
+    .AddXmlFile("XMLSettings.config",true,true);
 
 //IConfigurationRoot
 var configBuild = builder.Build(); // this build metod read all the keys and values flatens with colon and load the values in IConfigurationRoot object.
